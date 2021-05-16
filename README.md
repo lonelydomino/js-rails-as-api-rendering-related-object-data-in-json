@@ -308,7 +308,7 @@ we wanted to remove the `:updated_at` attribute from `Sighting` when rendered:
 def show
   sighting = Sighting.find_by(id: params[:id])
   render json: sighting, include: [:bird, :location], except: [:updated_at]
-end
+endp
 ```
 
 But this begins to complicate things significantly as we work with nested
